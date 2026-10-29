@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="description" content="Apex, your Formula 1 AI companion.">
+  <title>Apex F1 | Race Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="Apex F1 home">
+        <span class="brand-mark">A</span>
+        <span class="brand-copy"><strong>APEX<span>F1</span></strong><small>RACE INTELLIGENCE</small></span>
+      </a>
+
+      <button class="new-chat" id="newChatBtn"><span class="plus">+</span> New conversation</button>
+
+      <div class="side-label">QUICK TOPICS</div>
+      <button class="topic" data-prompt="Explain how Formula 1 qualifying works."><span>◉</span> Qualifying format</button>
+      <button class="topic" data-prompt="Explain the undercut and overcut in F1 strategy, with a simple example."><span>↗</span> Race strategy</button>
+      <button class="topic" data-prompt="How does DRS work in Formula 1, and what are its limitations?"><span>⌁</span> F1 technology</button>
+      <button class="topic" data-prompt="Compare Lewis Hamilton and Michael Schumacher's careers, separating facts from opinion."><span>♜</span> Driver comparisons</button>
+
+      <div class="sidebar-bottom">
+        <div class="status-line"><span class="status-dot"></span><span>AI ENGINE READY</span></div>
+        <p>Powered by Groq · No live race data connected</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div class="session-title"><span class="live-indicator"></span><span>PADDOCK CHAT</span><span class="slash">/</span><span class="muted">F1 ASSISTANT</span></div>
+        <div class="topbar-right"><span class="model-pill">GROQ AI</span><span class="avatar">A</span></div>
+      </header>
+
+      <section class="chat-scroll" id="chatScroll">
+        <div class="welcome" id="welcome">
+          <div class="eyebrow"><span></span> YOUR PERSONAL F1 ANALYST</div>
+          <h1>BUILT FOR<br><em>THE RACE.</em></h1>
+          <p class="welcome-copy">From pit-wall strategy to legendary rivalries.<br>Ask anything about the world of Formula 1.</p>
+          <div class="prompt-grid">
+            <button class="prompt-card" data-prompt="What makes a great Formula 1 driver beyond raw speed?"><span class="card-icon">◈</span><span><strong>Driver DNA</strong><small>What separates the greats?</small></span><span class="card-arrow">↗</span></button>
+            <button class="prompt-card" data-prompt="Explain the undercut in F1 and when a team would use it."><span class="card-icon">⌁</span><span><strong>Strategy room</strong><small>Think like the pit wall</small></span><span class="card-arrow">↗</span></button>
+            <button class="prompt-card" data-prompt="Explain the main aerodynamic forces on an F1 car in simple terms."><span class="card-icon">⌬</span><span><strong>Tech breakdown</strong><small>Under the bodywork</small></span><span class="card-arrow">↗</span></button>
+            <button class="prompt-card" data-prompt="Tell me about one of the most memorable rivalries in F1 history."><span class="card-icon">✦</span><span><strong>F1 legends</strong><small>Rivalries that defined eras</small></span><span class="card-arrow">↗</span></button>
+          </div>
+          <div class="welcome-foot"><span>01</span><span class="foot-line"></span><span>READY WHEN YOU ARE</span></div>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <div class="composer" id="composer">
+          <textarea id="messageInput" rows="1" maxlength="4000" placeholder="Ask your F1 question..." aria-label="Your message"></textarea>
+          <div class="composer-bottom">
+            <span class="composer-hint"><span class="keycap">↵</span> send <span class="hint-divider">·</span> <span class="keycap">shift ↵</span> new line</span>
+            <button class="send-btn" id="sendBtn" aria-label="Send message"><span>SEND</span><span class="send-arrow">↑</span></button>
+          </div>
+        </div>
+        <p class="disclaimer">Apex can make mistakes. Verify important stats and current race information.</p>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
