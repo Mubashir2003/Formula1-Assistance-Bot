@@ -1,8 +1,9 @@
-# Apex F1 Chatbot
+# F1 Assistance Chatbot 🏎️
 
 A streaming Formula 1 chatbot built with FastAPI, Groq, HTML, CSS, and JavaScript. This first version uses a system prompt and the model's learned knowledge. It does not use RAG, a historical database, or live race data.
-# Live Demo
+# Live Demo 🚀
 https://formula1-assistance-bot.onrender.com/
+
 ## Requirements
 
 - Python 3.10+
